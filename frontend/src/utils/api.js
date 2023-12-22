@@ -1,4 +1,4 @@
-const baseURL='http://localhost:4000';
+const baseURL='https://ai-chat-bot-server.vercel.app';
 
 export const apiEndpoints={
     login: `${baseURL}/api/user/login`,

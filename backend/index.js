@@ -15,7 +15,7 @@ const port=process.env.port || 4000;
 //delete - send data to delete something
 
 app.use(cors({
-    origin: [process.env.CORS_URL],
+    origin: ["https://ai-chat-bot-frontend.vercel.app"],
     credentials: true
 }))
 app.use(express.json());

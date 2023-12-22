@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { LuArrowUpSquare } from "react-icons/lu";
 import { GiStarShuriken } from "react-icons/gi";
 import Chatitem from './Chatitem';
+import { apiEndpoints } from '../utils/api';
   
 
 const Chatbox = ({chats, setChats}) => {
@@ -19,7 +20,7 @@ const Chatbox = ({chats, setChats}) => {
     }
     try{
       setIsLoading(true);
-      const response=await fetch('http://localhost:4000/api/chat/getPromptAnswer', {
+      const response=await fetch(apiEndpoints.getPromptAnswer, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

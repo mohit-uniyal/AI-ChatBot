@@ -35,7 +35,9 @@ const loginController=async (req, res)=>{
 const logoutController=(req, res)=>{
     res.cookie('auth_token', '', {
         httpOnly: true,
-        expiresIn: new Date(0)
+        expiresIn: new Date(0),
+        sameSite: 'None',
+        secure: true
     }).send();
 }
 
